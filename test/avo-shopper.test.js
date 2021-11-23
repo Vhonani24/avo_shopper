@@ -4,7 +4,7 @@ let AvoShopper = require("../avo-shopper");
 const Pool = pg.Pool;
 require('dotenv').config()
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://avos:avos123@localhost:5432/avo_shopper';
+const connectionString = process.env.DATABASE_URL || 'postgresql://vhonani:vhonani123@localhost:5432/avo_shopper';
 
 const pool = new Pool({
     connectionString
@@ -23,6 +23,8 @@ describe('The avo shopper', function () {
 
 		await avoShopper.createShop('Veggie Tales');
 		const shops = await await avoShopper.listShops();
+
+    
 
         assert.equal('Veggie Tales', shops[0].name);
     });
