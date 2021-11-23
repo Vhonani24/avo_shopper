@@ -80,27 +80,7 @@ app.get('/viewShops', async function (req, res) {
 	});
 });
 
-app.get('/shopDeals', async function (req, res) {
-	//const { stores } = req.body;
 
-	var shops = await avoshopper.listShops();
-
-
-
-
-	console.log(shops);
-	//console.log(getDeals);
-
-
-	res.render('shopDeals', {
-
-		shops
-		//deals: await avoshopper.dealsForShop();
-		//deal: await avoshopper.dealsForShop(stores)
-
-
-	});
-});
 app.get('/shopDeals/:id', async function (req, res) {
 	const { id } = req.params;
 
