@@ -1,7 +1,11 @@
-body {
-	background-color: lightseagreen;
-	color: whitesmoke;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+h1{
+	color: darkgreen;
+	font-family: sans-serif;
+}
+h2{
+	color: lightgreen;
+	font-family: sans-serif;
 }
 
 .container{
@@ -16,3 +20,13 @@ body {
     align-content: center;    
 
 }
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: url("avo.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

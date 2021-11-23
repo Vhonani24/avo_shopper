@@ -111,10 +111,27 @@ app.post('/shopDeals', async function (req, res) {
 
 
 
-app.get('/addShop', function (req, res) {
+app.get('/addShop', async function (req, res) {
+
+	var shops = await avoshopper.listShops();
 	res.render('addShop', {
-		counter
+		shops
 	});
+});
+
+app.post('/addShop', async function (req, res) {
+
+	const { store } = req.body;
+
+
+
+	console.log(store);
+
+	await avoshopper.createShop(store);
+
+	res.redirect('/addShop');
+
+
 });
 // start  the server and start listening for HTTP request on the PORT number specified...
 app.listen(PORT, function () {
