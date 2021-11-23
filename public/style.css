@@ -7,6 +7,11 @@ h2{
 	color: lightgreen;
 	font-family: sans-serif;
 }
+links{
+position: absolute;
+top: 0px;
+left: 0px;
+}
 
 .container{
 	margin: auto;

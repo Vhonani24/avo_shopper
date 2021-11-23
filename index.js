@@ -42,9 +42,11 @@ const avoshopper = AvoShopper(pool);
 
 let counter = 0;
 
-app.get('/', function (req, res) {
+app.get('/', async function (req, res) {
+	var deals = await avoshopper.topFiveDeals();
+	
 	res.render('index', {
-		counter
+		deals: await avoshopper.topFiveDeals()
 	});
 });
 app.get('/add', async function (req, res) {

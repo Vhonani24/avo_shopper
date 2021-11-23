@@ -2,11 +2,24 @@
 
 <h2>Best deals</h2>
 
+<table style="color: red;">
 
-<a href="/add">Add Deal</a>
-<a href="/viewShops">View Shops & Deals</a>
+    {{#each deals}}
+    <tr>
+        <td>
+            {{qty}} for {{price}}
+        </td>
+    </tr>
+    {{/each}}
 
-<a href="/addShop">Add Shops</a>
+
+</table>
+
+
+<a class= "links"href="/add">Add Deal</a>
+<a class="links"href="/viewShops">View Shops & Deals</a>
+
+<a class="links"href="/addShop">Add Shops</a>
 
 
 
