@@ -44,10 +44,32 @@ let counter = 0;
 
 app.get('/', async function (req, res) {
 	var deals = await avoshopper.topFiveDeals();
+
+
+	
 	
 	res.render('index', {
 		deals: await avoshopper.topFiveDeals()
 	});
+});
+
+app.post('/', async function (req, res) {
+	const { price } = req.body;
+
+    var deal =	await avoshopper.recommendDeals(price)
+
+
+
+	console.log(price);
+
+	console.log( await avoshopper.recommendDeals(price));
+
+	res.render('index',{
+
+		deal
+
+	});
+
 });
 app.get('/add', async function (req, res) {
 	var shops = await avoshopper.listShops();
