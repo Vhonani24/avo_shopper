@@ -1,0 +1,19 @@
+<h1>Available Shops</h1>
+
+<form action="/viewShops" method="GET" class="buttons" name="add">
+
+   
+    <table>
+
+        {{#each shops}}
+        <tr>
+            <td><a href="/shopDeals/{{id}}">{{this.name}}</a></td>
+        </tr>
+        {{/each}}
+
+
+    </table>
+
+   
+    </div>
+</form>

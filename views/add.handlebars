@@ -1,0 +1,45 @@
+<h1>Please select store</h1>
+
+
+<form action="/add" method="POST" class="buttons" name="add">
+
+
+
+    <div style="margin-right: 5px;">
+        <select class="form-select" name="stores" aria-label="Default select example">
+            {{#each shops}}
+            <option value={{id}}>{{name}}</option>
+            {{!-- <option value="2">Tsjekkers </option>
+            <option value="3">Shopryte</option>
+            <option value="4">Pick n Play</option>
+            <option value="5">Fruit lovers</option> --}}
+            {{/each}}
+        </select>
+
+    </div>
+
+    <div class="col-auto" style=" margin-right: 5px;">
+        <button type="submit" class="btn btn-success" id="submit">Submit</button>
+    </div>
+    <h1>Enter A Deal</h1 >
+    <div class="buttons">
+        <div class="col-xs-2" style=" margin-right: 5px;">
+            <input type="text" class="form-control" name="Qty" id="Qty" placeholder="Enter Qty">
+        </div>
+
+       
+        <div class="col-xs-2" style=" margin-right: 5px;">
+            <input type="text" class="form-control" name="Price" id="Price" placeholder="Enter Price">
+        </div>
+
+        <button type="submit" class="btn btn-success" id="add" style=" margin-right: 5px;">Add</button>
+
+
+
+
+    </div>
+
+
+
+
+</form>
